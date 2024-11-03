@@ -9,7 +9,7 @@
 .NOTES
     Author       : Stoyan Chalakov  (https://www.pohn.ch/blog/)
     Requires     : Operations Manager Powershell
-    Version      : 1.0
+    Version      : 1.1
     Original Date: 10 September 2024
 #>
 
@@ -33,8 +33,6 @@ try {
     Write-Error "Failed to retrieve rules or monitors: $_"
     exit
 }
-
- 
 
 #Create a hashtable of all the SCOM classes for faster retreival based on Class ID. This part has been stoledn from Kevin Holman's blog post: https://blogs.technet.microsoft.com/kevinholman/2016/11/02/using-powershell-to-disable-a-rule-or-monitor-in-scom/
 $ClassHT = @{}
